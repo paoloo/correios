@@ -1,6 +1,6 @@
 # Correios CLI
 ```
- a      \\
+        \\
   // // // //
      \\   Correios CLI 0.1
 ```
