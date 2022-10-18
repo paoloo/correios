@@ -12,6 +12,8 @@ Too simple!
 ```
 $ go install github.com/paoloo/correios@latest
 ```
+NOTE: make sure that your $GOPATH/bin is on your **PATH**!
+
 ## Execution
 
 - `correios`  or `correios -h` To show syntax tips
