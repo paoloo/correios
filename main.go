@@ -19,7 +19,7 @@ func main(){
   } else {
     fmt.Println("        \\\\   ")
     fmt.Println("  // // // //")
-    fmt.Println("     \\\\   Correios CLI 0.1")
+    fmt.Println("     \\\\   Correios CLI 0.3")
     fmt.Println("          Uso ./correios flag VALOR")
     fmt.Println("          onde o VALOR e' obrigatorio e flag pode ser:")
     flag.PrintDefaults()

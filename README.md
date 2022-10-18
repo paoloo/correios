@@ -2,7 +2,7 @@
 ```
         \\
   // // // //
-     \\   Correios CLI 0.1
+     \\   Correios CLI 0.3
 ```
 A pure go implementation of some services for brazilian state post office: Correios.
 
