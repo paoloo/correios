@@ -6,6 +6,7 @@ import (
   "net/http"
   "io/ioutil"
   "encoding/xml"
+  "encoding/json"
 )
 
 type createEnvelope struct {
@@ -21,14 +22,14 @@ type create struct {
 }
 
 type workItem struct {
-  Bairro string `xml:"bairro"`
-  Cep string `xml:"cep"`
-  Cidade string `xml:"cidade"`
-  Complemento string `xml:"complemento"`
-  Complemento2 string `xml:"complemento2"`
-  End string `xml:"end"`
-  Id int `xml:"id"`
-  Uf string `xml:"uf"`
+  Bairro string `xml:"bairro" json:"bairro"`
+  Cep string `xml:"cep" json:"cep"`
+  Cidade string `xml:"cidade" json:"cidade"`
+  Complemento string `xml:"complemento" json:"complemento"`
+  Complemento2 string `xml:"complemento2" json:"complemento2"`
+  End string `xml:"end" json:"end"`
+  Id int `xml:"id" json:"id"`
+  Uf string `xml:"uf" json:"UF"`
 }
 
 func toUtf8(iso8859_1_buf []byte) []byte {
@@ -42,7 +43,8 @@ func toUtf8(iso8859_1_buf []byte) []byte {
 func PrintCep(_blob []byte) {
   b := createEnvelope{}
   xml.Unmarshal(toUtf8(_blob), &b)
-  fmt.Printf("%+v", b.Body.CepResponse.Return)
+  data, _ := json.MarshalIndent(b.Body.CepResponse.Return, "", "\t")
+  fmt.Println(string(data))
 }
 
 func BuscaCep(_cep string) (string, []byte){
@@ -62,4 +64,3 @@ func BuscaCep(_cep string) (string, []byte){
   }
   return resp.Status, _body
 }
-
