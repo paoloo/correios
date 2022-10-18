@@ -1,4 +1,4 @@
-FROM golang:1.17 as build-stage
+FROM golang:1.18 as build-stage
 ENV APP /go/src/github.com/paoloo/correios
 ADD . $APP/
 WORKDIR $APP
