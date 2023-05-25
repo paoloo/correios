@@ -14,6 +14,11 @@ $ go install github.com/paoloo/correios@latest
 ```
 NOTE: make sure that your $GOPATH/bin is on your **PATH**!
 
+### asdf
+
+If you installed go with asdf, make sure to reshim it (`asdf reshim golang`) after installing this package.
+Refer to the asdf [plugin](https://github.com/kennyp/asdf-golang) for more information.
+
 ## Execution
 
 - `correios`  or `correios -h` To show syntax tips
